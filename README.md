@@ -1,18 +1,45 @@
 Mastermind
 ==========
 
-![](mastermind.jpg)
+Cette application permet de jouer au mastermind, c'est un jeu dans lequel on essaye de deviner une combinaison aléatoire de pions de couleurs que l'on va placer sur le plateau dans un certain ordre, en fonction du mode préalablement sélectionné et de la combinaison soumise le joueur recevera des indices pour l'aider à trouver la bonne combinaison avant d'avoir épuisé toutes ses tentatives.
 
-L'objectif de ce projet est de concevoir une application permettant à un joueur de jouer au mastermind contre l'ordinateur.
+Installation
+============
+
+## Pour Linux et macOs
+
+Pour lancer notre application sur Linux et MacOS il suffit d'aller dans le répertoire où se trouve le .jar (./out/artifacts/mastermind_jar/mastermind.jar) et de lancer
+la commande ``java -jar mastermind.jar``.
+Si une erreur survient, vérifier que vous diposez bien d'une version suffisamment récente de java.
+Si ce n'était pas le cas l'application devrait fonctionner après mise à jour du JDK.
+
+## Pour Windows
+
+Pour lancer notre application sur Windows, il suffit d'aller dans le répertoire où se trouve le fichier .jar (./out/artifacts/mastermind_jar/mastermind.jar) et de lancer la commande ``java -jar mastermind.jar``. Vous pouvez également double-cliquer sur le fichier .jar et l'ouvrir avec l'application : `Java(TM) Platform SE binary` si elle est disponible.
+
+Si une erreur survient, vérifiez que vous disposez bien d'une version suffisamment récente de Java. Si ce n'est pas le cas, installez la version 21.0.1 du JDK Java pour Windows/x64 (si vous pouvez obtenir la version x64). Vous pouvez le trouver en [cliquant ici](https://jdk.java.net/21/).
+
+Ensuite, décompressez le dossier où vous le souhaitez. Pour que cela fonctionne, suivez les étapes suivantes :
+
+1. Cliquez droit sur le bouton "Démarrer" dans la barre des tâches.
+2. Sélectionnez "Système".
+3. Cliquez sur "Informations système" (si cela ne vous met pas dedans par défaut).
+4. Cliquez sur "Paramètres système avancés" dans la section `Spécifications de l'appareil`.
+5. Cliquez sur le bouton "Variables d'environnement" vers le bas de la fenêtre.
+6. Dans la section `Variables du système`, sélectionnez la Variable `Path`.
+7. Si vous voyez quelque chose qui ressemble à : `C:\Program Files\Java\jdk-xx\bin`, supprimez-le.
+8. Cliquez sur "Nouveau".
+9. Ajoutez le chemin complet du dossier "bin" de la nouvelle version d'OpenJDK (là où vous l'avez décompressé).
+10. Lorsque vous avez fini, selectionner se que vous avez ajouter et cliquer sur "Déplacer vers le haut" jusqu'à tout en haut. Une fois cela fais, cliquez sur "OK" jusqu'à ce que vous retourniez dans les paramètres du PC.
+11. Fermez l'invite de commandes, rouvrez celle où se trouve `mastermind.jar`, puis refaites ``java -jar mastermind.jar``.
+
+Cahier des charges
+==================
+
+![](mastermind.jpg)
 
 Consignes générales
 -------------------
-
-#### Pour démarrer avec le dépôt Git
-
-1. Créez un groupe `nom1-nom2` où nom1 et nom2 sont les noms de famille des deux membres du binôme
-1. Forkez le dépôt https://git.unistra.fr/a313/a31-mastermind dans le groupe créé ci-dessus
-1. Ajoutez le responsable du module et votre enseignant de TD/TP comme Reporter de votre dépôt
 
 #### Pour toute la durée du projet
 
@@ -96,42 +123,3 @@ Bonus
 -----
 
 Pouvoir recommencer une partie sans relancer l'application.
-
-Les rendus
-----------
-
-### 1er rendu
-
-Date limite : le dimanche **10/12 à 23h59**
-
-Documents :
-
-- le **diagramme de classes** UML
-  - le package `model` doit être décris en anticipant tout le développement
-  - les packages `controller` et `view` doivent proposer une version de base mais peuvent être incomplets
-- le **code source**
-- un **rapport** pour expliquer vos choix de conception
-
-Le rendu est à faire sur votre dépôt Git **sur une branche nommée `rendu1`**.
-
-### 2ème rendu
-
-Date limite : le dimanche **14/01 à 23h59**
-
-Documents :
-
-- le **diagramme de classes** UML
-	- il doit être entièrement cohérent avec le code
-	- il doit représenter l'intégralité de votre application
-- le **code source**
-- un **exécutable au format JAR**
-- un **mode d'emploi** nommé `INSTALL.md` à la racine de votre projet, qui explique comment installer et lancer votre application
-- un **rapport** pour présenter vos nouveaux choix de conception depuis le 1er rendu et expliquer les raisons des évolutions des choix de conception qui avaient été annoncés au 1er rendu.
-
-Le rendu est à faire sur votre dépôt Git **sur une branche nommé `rendu2`**.
-
-### Précisions
-
-- Vos diagrammes UML doivent être au format PlantUML et svg,
-- À la fin du projet, votre dépôt devra contenir au minimum une branche `rendu1` et une branche `rendu2`, ce seront les seules branches évaluées. Vous êtes libre de gérer le reste de votre dépôt comme vous le souhaitez.
-- Pensez à vérifier que votre exécutable fonctionne sur Linux, Windows et Mac.
